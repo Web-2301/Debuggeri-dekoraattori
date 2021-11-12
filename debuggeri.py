@@ -11,8 +11,8 @@ def debuggeri(function):
             now = datetime.now()
             msg = now.strftime("%Y-%m-%d %H:%M:%S") + ' '
             msg += function.__name__ + ' '
-            msg +=  str(args)[1:-2]
-            msg +=  str(kwargs)[1:-2] 
+            msg += ''.join(args)
+            msg += ' ' + str(kwargs)[1:-1].replace(': ', ':')
             tulos = function(*args)
             msg += ",tulos:" + tulos
             tiedosto = open("debug_log.txt", "a", encoding="utf-8") 

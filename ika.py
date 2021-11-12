@@ -6,7 +6,7 @@ from debuggeri import debuggeri
 kysely = "Anna ikäsi muodossa 1.1.1970:"
 
 @debuggeri
-def ikalaskin(syntymaaika):
+def ikalaskin(syntymaaika,toinen=""):
     d1 = datetime.strptime(syntymaaika,'%d.%m.%Y').date()
     d2 = date.today()
     d = datediff.relativedelta(d2,d1)
@@ -21,7 +21,7 @@ def ikakysely():
         try:
             syntymaaika = input(kysely)
             datetime.strptime(syntymaaika,'%d.%m.%Y')
-            ika = ikalaskin(syntymaaika)
+            ika = ikalaskin(syntymaaika,testi="Testiä")
             valmis = True
         except ValueError:
             print("Virhe")
