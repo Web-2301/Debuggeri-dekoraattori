@@ -21,7 +21,7 @@ def ikakysely():
         try:
             syntymaaika = input(kysely)
             datetime.strptime(syntymaaika,'%d.%m.%Y')
-            ika = ikalaskin(syntymaaika,testi="Testiä")
+            ika = ikalaskin(syntymaaika)
             valmis = True
         except ValueError:
             print("Virhe")
