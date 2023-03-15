@@ -1,5 +1,5 @@
 from ika import ikakysely
 
 ika = ikakysely()
-msg = 'Hello world, '+ika+'!'
+msg = f"Ikäsi on nyt: {ika}!"
 print(msg)
